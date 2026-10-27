@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Richie Geraldin | Portofolio</title>
+  <meta name="description" content="Portofolio Richie Geraldin, siswa Rekayasa Perangkat Lunak SMKS Putra Anda Binjai." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Latar belakang animasi (partikel) -->
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">RG<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Ganti tema">🌙</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="hello">Halo, saya 👋</p>
+          <h1>Richie Geraldin</h1>
+          <h2>Saya seorang <span id="typing" class="typing"></span><span class="cursor">|</span></h2>
+          <p class="hero-desc">
+            Siswa kelas 11 jurusan Rekayasa Perangkat Lunak di SMKS Putra Anda Binjai.
+            Saya suka belajar membuat website dan aplikasi, serta terus mengembangkan kemampuan di dunia teknologi.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+            <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/USERNAME-KAMU" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+            <a href="https://instagram.com/USERNAME-KAMU" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            <a href="https://linkedin.com/in/USERNAME-KAMU" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <div class="photo-wrap">
+            <!-- Ganti dengan fotomu: taruh file di folder "images" lalu pakai nama foto.jpg -->
+            <img src="images/foto.jpg" alt="Foto Richie Geraldin" id="profileImg"
+                 onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';" />
+            <div class="photo-fallback" id="photoFallback">RG</div>
+          </div>
+          <div class="floating-badge b1">HTML</div>
+          <div class="floating-badge b2">CSS</div>
+          <div class="floating-badge b3">JS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Kenali Saya</span>
+          <h3>Tentang Saya</h3>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Halo! Nama saya <strong>Richie Geraldin</strong>, saat ini saya duduk di kelas 11
+              jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong> di <strong>SMKS Putra Anda Binjai</strong>.
+            </p>
+            <p>
+              Saya tertarik pada pengembangan web dan pemrograman. Di jurusan RPL saya belajar membuat
+              website, aplikasi, dan mengolah logika program. Saya senang mencoba hal baru, belajar dari
+              kesalahan, dan menyelesaikan masalah lewat kode.
+            </p>
+            <p>
+              Target saya adalah menjadi software developer yang handal dan terus berkembang
+              mengikuti teknologi.
+            </p>
+            <a href="cv/CV-Richie-Geraldin.pdf" class="btn btn-primary" download>Unduh CV</a>
+          </div>
+          <div class="about-cards">
+            <div class="info-card reveal"><h4>Nama</h4><p>Richie Geraldin</p></div>
+            <div class="info-card reveal"><h4>Kelas</h4><p>11 RPL</p></div>
+            <div class="info-card reveal"><h4>Sekolah</h4><p>SMKS Putra Anda Binjai</p></div>
+            <div class="info-card reveal"><h4>Lokasi</h4><p>Binjai, Sumatera Utara</p></div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal"><b class="count" data-target="5">0</b><span>Proyek</span></div>
+          <div class="stat reveal"><b class="count" data-target="3">0</b><span>Bahasa Pemrograman</span></div>
+          <div class="stat reveal"><b class="count" data-target="2">0</b><span>Sertifikat</span></div>
+          <div class="stat reveal"><b class="count" data-target="1">0</b><span>Tahun Belajar Coding</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section alt" id="education">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Perjalanan</span>
+          <h3>Pendidikan &amp; Pengalaman</h3>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">2025 - Sekarang</span>
+              <h4>SMKS Putra Anda Binjai</h4>
+              <p class="tl-sub">Jurusan Rekayasa Perangkat Lunak (RPL) - Kelas 11</p>
+              <p>Mempelajari dasar pemrograman, pengembangan web, basis data, dan logika algoritma.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="dot"></div>
+            <div class="tl-card">
+              <span class="tl-date">Tahun ... - Tahun ...</span>
+              <h4>Organisasi / Ekstrakurikuler</h4>
+              <p class="tl-sub">Isi dengan kegiatan kamu (OSIS, Pramuka, dll.)</p>
+              <p>Tuliskan peran dan hal yang kamu pelajari di sini.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Kemampuan</span>
+          <h3>Keahlian Saya</h3>
+        </div>
+        <div class="skills-grid">
+          <div class="skill reveal">
+            <div class="skill-head"><span>HTML</span><span>85%</span></div>
+            <div class="bar"><div class="fill" data-width="85"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>CSS</span><span>75%</span></div>
+            <div class="bar"><div class="fill" data-width="75"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>JavaScript</span><span>60%</span></div>
+            <div class="bar"><div class="fill" data-width="60"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>PHP</span><span>50%</span></div>
+            <div class="bar"><div class="fill" data-width="50"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>MySQL</span><span>50%</span></div>
+            <div class="bar"><div class="fill" data-width="50"></div></div>
+          </div>
+          <div class="skill reveal">
+            <div class="skill-head"><span>Git &amp; GitHub</span><span>55%</span></div>
+            <div class="bar"><div class="fill" data-width="55"></div></div>
+          </div>
+        </div>
+
+        <h4 class="sub-heading reveal">Tools yang digunakan</h4>
+        <div class="tags reveal">
+          <span>VS Code</span><span>Git</span><span>GitHub</span><span>Figma</span>
+          <span>XAMPP</span><span>Chrome DevTools</span><span>Canva</span>
+        </div>
+
+        <h4 class="sub-heading reveal">Soft Skills</h4>
+        <div class="tags reveal">
+          <span>Kerja Tim</span><span>Cepat Belajar</span><span>Problem Solving</span>
+          <span>Komunikasi</span><span>Disiplin</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section alt" id="projects">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Karya</span>
+          <h3>Proyek Saya</h3>
+        </div>
+
+        <div class="filters reveal">
+          <button class="filter active" data-filter="all">Semua</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="app">Aplikasi</button>
+          <button class="filter" data-filter="design">Desain</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project reveal" data-cat="web">
+            <div class="thumb t1">🌐</div>
+            <div class="project-body">
+              <h4>Website Profil Sekolah</h4>
+              <p>Website informasi sekolah dengan tampilan responsif menggunakan HTML, CSS, dan JavaScript.</p>
+              <div class="tags small"><span>HTML</span><span>CSS</span><span>JS</span></div>
+              <div class="links"><a href="#" target="_blank" rel="noopener">Demo</a><a href="#" target="_blank" rel="noopener">Kode</a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="app">
+            <div class="thumb t2">🧮</div>
+            <div class="project-body">
+              <h4>Aplikasi Kalkulator</h4>
+              <p>Kalkulator sederhana berbasis web dengan operasi dasar dan tampilan modern.</p>
+              <div class="tags small"><span>HTML</span><span>CSS</span><span>JS</span></div>
+              <div class="links"><a href="#" target="_blank" rel="noopener">Demo</a><a href="#" target="_blank" rel="noopener">Kode</a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="web">
+            <div class="thumb t3">📝</div>
+            <div class="project-body">
+              <h4>To-Do List</h4>
+              <p>Aplikasi catatan tugas harian dengan penyimpanan di LocalStorage.</p>
+              <div class="tags small"><span>JavaScript</span><span>LocalStorage</span></div>
+              <div class="links"><a href="#" target="_blank" rel="noopener">Demo</a><a href="#" target="_blank" rel="noopener">Kode</a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="design">
+            <div class="thumb t4">🎨</div>
+            <div class="project-body">
+              <h4>Desain UI Aplikasi</h4>
+              <p>Rancangan antarmuka aplikasi mobile menggunakan Figma.</p>
+              <div class="tags small"><span>Figma</span><span>UI/UX</span></div>
+              <div class="links"><a href="#" target="_blank" rel="noopener">Lihat</a></div>
+            </div>
+          </article>
+        </div>
+        <p class="note reveal">* Ganti contoh proyek di atas dengan proyek aslimu dan isi link Demo / Kode dengan link GitHub.</p>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Prestasi</span>
+          <h3>Sertifikat &amp; Penghargaan</h3>
+        </div>
+        <div class="cert-grid">
+          <div class="cert reveal"><span class="cert-icon">🏅</span><h4>Nama Sertifikat 1</h4><p>Penyelenggara - Tahun</p></div>
+          <div class="cert reveal"><span class="cert-icon">🎓</span><h4>Nama Sertifikat 2</h4><p>Penyelenggara - Tahun</p></div>
+          <div class="cert reveal"><span class="cert-icon">🏆</span><h4>Penghargaan / Lomba</h4><p>Penyelenggara - Tahun</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section alt" id="contact">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Ayo Terhubung</span>
+          <h3>Hubungi Saya</h3>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p>Tertarik berkolaborasi atau ingin bertanya? Kirim pesan, saya akan membalas secepatnya.</p>
+            <ul>
+              <li>📧 <a href="mailto:richiegeraldin@gmail.com">richiegeraldin@gmail.com</a></li>
+              <li>📱 <a href="https://wa.me/6280000000000" target="_blank" rel="noopener">+62 800-0000-0000</a></li>
+              <li>📍 Binjai, Sumatera Utara</li>
+            </ul>
+          </div>
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <label>Nama
+              <input type="text" id="cName" placeholder="Nama kamu" required />
+            </label>
+            <label>Email
+              <input type="email" id="cEmail" placeholder="email@contoh.com" required />
+            </label>
+            <label>Pesan
+              <textarea id="cMsg" rows="5" placeholder="Tulis pesanmu..." required></textarea>
+            </label>
+            <p class="form-msg" id="formMsg"></p>
+            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Richie Geraldin. Dibuat dengan HTML, CSS &amp; JavaScript.</p>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
